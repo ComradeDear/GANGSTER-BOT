@@ -1,5 +1,4 @@
-# by uniborg...Thanks @spechide
-# Now will be used in MafialBot too....
+
 import asyncio
 import datetime
 from datetime import datetime
@@ -7,11 +6,11 @@ from datetime import datetime
 from telethon import events
 from telethon.tl import functions, types
 from userbot import CMD_HELP
-from userbot import ALIVE_NAME, mafiaversion
+from userbot import ALIVE_NAME, gangsterversion
 from mafiabot.utils import admin_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "GANGSTER User"
 
 mafia = bot.uid
 
@@ -60,7 +59,7 @@ async def set_not_afk(event):
                 event.chat_id,
                 "Please set `PRIVATE_GROUP_BOT_API_ID` "
                 + "for the proper functioning of afk functionality "
-                + "Ask in @MafiaBot_Chit_Chat to get help setting this value\n\n `{}`".format(str(e)),
+                + "Ask in @GangsterBot_Support to get help setting this value\n\n `{}`".format(str(e)),
                 reply_to=event.message.id,
                 silent=True,
             )
@@ -96,10 +95,10 @@ async def on_afk(event):
         msg = None
         
         message_to_reply = (
-            f"Hey!! My Legend master [{DEFAULTUSER}](tg://user?id={mafia}) is currently offline... Since when?\n**For** `{total_afk_time}`\n"
+            f"Hey!!MY SWEET MASTER [{DEFAULTUSER}](tg://user?id={mafia})  currently offline... Since when?\n**For** `{total_afk_time}`\n"
             + f"\n\n👇__The Reason Is__👇 :-\n`{reason}`"
   if reason
-            else f"**Heyy!**\n__I am currently unavailable.__\n__Since when, you ask? From__ `{total_afk_time}`\nI'll be back when I feel to come🚶"
+            else f"**Heyy!**\n__I am currently unavailable.__\n__Since when, you ask? From__ `{total_afk_time}`\nI'll be back when this world will be full of gangsters**🚶"
         )
         msg = await event.reply(message_to_reply, file=mafiapic)
         await asyncio.sleep(2)
