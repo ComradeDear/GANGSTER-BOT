@@ -9,9 +9,6 @@ from var import Var
 
 
 StartTime = time.time()
-mafiaversion = "2.0.4"
-botversion = "0.1"
-mafiatelethon = "1.21.1"
 
 os.system("pip install aria2p")
 if Var.STRING_SESSION:
@@ -33,7 +30,7 @@ LOAD_PLUG = {}
 # PaperPlaneExtended Support Vars
 ENV = os.environ.get("ENV", False)
 
-MAFIA_ID = ["1212368262"]
+GANGSTER_ID = ["1990239830"]
 
 """ PPE initialization. """
 
