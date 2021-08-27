@@ -14,8 +14,8 @@ from telethon.tl.types import (ChannelParticipantsAdmins,
                                    ChatBannedRights,
                                      MessageEntityMentionName,
                                        MessageMediaPhoto)
-from mafiabot.utils import register, errors_handler
-from mafiabot.utils import admin_cmd
+from gangsterbot.utils import register, errors_handler
+from gangsterbot.utils import admin_cmd
 from userbot import bot as borg
 from userbot.cmdhelp import CmdHelp
 
@@ -45,7 +45,7 @@ async def get_full_user(event):
         try:
             user_obj = await event.client.get_entity(user)
         except Exception as err:
-            return await event.edit("Error... Please report at @RIDERIANS", str(err))           
+            return await event.edit("Error... Please report at @gangsterbot_support", str(err))           
     return user_obj, extra
 
 global hawk,moth
