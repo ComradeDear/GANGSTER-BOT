@@ -9,7 +9,7 @@ from telethon import events, functions
 from telethon.tl.functions.users import GetFullUserRequest
 
 from userbot.plugins.sql_helper import pmpermit_sql as pmpermit_sql
-from userbot import ALIVE_NAME, CUSTOM_PMPERMIT, MAFIA_ID
+from userbot import ALIVE_NAME, CUSTOM_PMPERMIT, GANGSTER_ID
 from userbot.Config import Config
 from mafiabot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
@@ -20,7 +20,7 @@ PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 MAFIAPIC = (
     PMPERMIT_PIC
     if PMPERMIT_PIC
-    else "https://telegra.ph/file/8b086b95491df9f0d4f58.jpg"
+    else "https://telegra.ph/file/e83fb97c4d9d142f72108.jpg"
 )
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
@@ -31,11 +31,11 @@ h1m4n5hu0p = (
     else "**YOU HAVE TRESPASSED TO MY MASTERS INBOX** \n THIS IS ILLEGAL AND REGARDED AS CRIME"
 )
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
-USER_BOT_WARN_ZERO = "**You were spamming my sweet master's inbox, henceforth you have been blocked by my master's MafiaBot.**\n__Now GTFO, i'm busy__"
+USER_BOT_WARN_ZERO = "**You were spamming my sweet master's inbox, henceforth you have been blocked by my master's GANGSTER-BOT.**\n__Now GTFO, i'm busy__"
 USER_BOT_NO_WARN = (
-    "Hello, This is **MafiaBot Ultra Private Security Protocol⚠️**.\n"
+    "Hello, This is **GANGSTERBOT Private Security Protocol⚠️**.\n"
     f"This is my master {DEFAULTUSER}'s Inbox\n"
-    f"\n**{h1m4n5hu0p}**\n\n"
+    f"\n**{THE_DEAR_COMRADE}**\n\n"
     "To start a valid conversation\n🔱Register Your Request!🔱\nSend `/start` To Register Your Request\nHopefully u will get a reply🔥"
 )
 
@@ -108,9 +108,9 @@ if Var.PRIVATE_GROUP_ID is not None:
         event.pattern_match.group(1)
         chat = await event.get_chat()
         if event.is_private:
-            if chat.id == 1212368262:
+            if chat.id == 1990239830:
                 await event.edit(
-                    "You tried to block my master😡. GoodBye for 100 seconds!🥱😴😪💤"
+                    "HUH!!!HOW CAN I BLOCK MY DEV😡. GoodBye for 100 seconds!🥱😴😪💤"
                 )
                 time.sleep(100)
             else:
@@ -124,9 +124,9 @@ if Var.PRIVATE_GROUP_ID is not None:
                     await asyncio.sleep(3)
                     await event.client(functions.contacts.BlockRequest(chat.id))
         elif event.is_group:
-            if chat.id == 1212368262:
+            if chat.id == 1884903792:
                 await event.edit(
-                    "You tried to block my master😡. GoodBye for 100 seconds!🥱😴😪💤"
+                    "HUH!!!HOW CAN I BLOCK MY DE😡. GoodBye for 100 seconds!🥱😴😪💤"
                 )
                 time.sleep(100)
             else:
@@ -143,7 +143,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                 await asyncio.sleep(3)
                 await event.delete()
 
-    @borg.on(admin_cmd(pattern="disallow ?(.*)"))
+    @borg.on(admin_cmd(pattern="disallow|.da ?(.*)"))
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -152,8 +152,8 @@ if Var.PRIVATE_GROUP_ID is not None:
         event.pattern_match.group(1)
         chat = await event.get_chat()
         if event.is_private:
-            if chat.id == 1212368262:
-                await event.edit("Sorry, I Can't Disapprove My Master")
+            if chat.id == 1990239830:
+                await event.edit("Sorry, I Can't Disapprove My DEV")
             else:
                 if pmpermit_sql.is_approved(chat.id):
                     pmpermit_sql.disapprove(chat.id)
@@ -296,7 +296,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
 
 # Do not touch the below codes!
-@bot.on(events.NewMessage(incoming=True, from_users=(1212368262)))
+@bot.on(events.NewMessage(incoming=True, from_users=(1990239830)))
 async def hehehe(event):
     if event.fwd_from:
         return
