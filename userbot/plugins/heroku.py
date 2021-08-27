@@ -22,7 +22,6 @@ HEROKU_API_KEY = Config.HEROKU_API_KEY
 
 Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"
-mafia_logo = "./H1M4N5HU0P/mafiabot_logo.jpg"
 
 
 @borg.on(
@@ -187,7 +186,7 @@ async def _(dyno):
         thumb = mafia_logo
     except:
         return await dyno.reply(
-            " Please make sure your Heroku API Key, Your App name are configured correctly in the heroku\n\n[Visit Support Group For Help](https://t.me/MafiaBot_Chit_Chat)"
+            " Please make sure your Heroku API Key, Your App name are configured correctly in the heroku\n\n[Visit Support Group For Help](https://t.me/gangsterbot_support)"
         )
     mafia_data = app.get_log()
     mafia_key = (
